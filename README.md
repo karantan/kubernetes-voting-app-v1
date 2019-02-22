@@ -42,7 +42,8 @@ it. Just follow this [instructions](https://kubernetes.io/docs/setup/turnkey/gce
 
 ## Deploy the app
 
-The voting app will consist of 5 parts:
+We will use [Docker simple voting app example](https://github.com/dockersamples/example-voting-app)
+for our use case. The voting app consist of 5 parts:
 
 1. Frontend Voting App - Python
 1. Frontend Result App - NodeJS
@@ -74,5 +75,5 @@ We need 4 services for our Pods:
 1. [result-service.yaml](services/result-service.yaml): `kubectl create -f services/result-service.yaml` - it will expose result app on port 80 to external IP via load balancer.
 1. [voting-service.yaml](services/voting-service.yaml): `kubectl create -f services/voting-service.yaml` - it will expose voting app on port 80 to external IP via load balancer.
 
-And this is it. Type `kubectl get services` to see what is external IP has GCP assigned
+And this is it. Type `kubectl get services` to see which external IP has GCP assigned
 to voting and result service and then just open those pages in your web-browser.
