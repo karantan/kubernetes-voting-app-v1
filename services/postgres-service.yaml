@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgresql-service
+  labels:
+    app: voting-app-v1
+    name: postgresql-service
+spec:
+  # ClusterIP type by default
+  ports:
+    - port: 5432  # targetPort is the same as port if not stated otherwise
+  selector:
+    name: postgresql-pod
