@@ -77,3 +77,7 @@ We need 4 services for our Pods:
 
 And this is it. Type `kubectl get services` to see which external IP has GCP assigned
 to voting and result service and then just open those pages in your web-browser.
+
+![kubectl get services](_images/externalIP.png)
+
+So in my case this is http://35.194.42.50 and http://35.184.24.109
