@@ -81,3 +81,13 @@ to voting and result service and then just open those pages in your web-browser.
 ![kubectl get services](_images/externalIP.png)
 
 So in my case this is http://35.194.42.50 and http://35.184.24.109
+
+# How to improve
+
+In Production use cases typically you will not be creating a pod definition file or a
+replica set to finish an file. In most cases you will be creating only a
+[deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+definition file directly.
+
+[Here](https://github.com/karantan/kubernetes-voting-app-v2) is a version 2 of this
+example using Deployments instead of Pods.
